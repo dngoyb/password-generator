@@ -1,0 +1,77 @@
+body {
+	background-color: #333333;
+	color: #ffffff;
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', */
+	/* 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+	font-family: 'Roboto Mono', monospace;
+}
+
+.container {
+	background-color: green;
+	padding: 3rem;
+	border-radius: 1rem;
+	border: 2px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.form {
+	display: grid;
+	grid-template-columns: auto auto;
+	row-gap: 1rem;
+	column-gap: 3rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	margin: 0;
+	text-align: center;
+}
+
+label {
+	font-weight: bold;
+}
+
+.character-container {
+	display: flex;
+	align-items: center;
+}
+.numbers {
+	width: 2rem;
+}
+.password-display {
+	padding: 1rem;
+	background-color: blanchedalmond;
+	color: black;
+	border: 1px solid black;
+	border-radius: 0.5rem;
+	height: 2rem;
+	width: 350px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	word-break: break-all;
+}
+
+.generate-password {
+	grid-column: span 2;
+	background-color: transparent;
+	border: 2px solid white;
+	color: white;
+	padding: 0.5rem 1rem;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 1rem;
+}
+
+.generate-password:hover {
+	background-color: #00ff40;
+}
