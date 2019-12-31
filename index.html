@@ -21,17 +21,17 @@
 				<div class="character-container">
 					<input
 						type="range"
-						min="1"
+						min="5"
 						max="50"
 						value="6"
 						id="charRange"
 					/>
 					<input
 						type="number"
-						min="1"
+						min="5"
 						max="50"
 						value="6"
-						id="charNumber"
+						id="length"
 						class="numbers"
 					/>
 				</div>
@@ -44,10 +44,11 @@
 				<label for="includeSymbols">Include Symbols</label>
 				<input type="checkbox" id="includeSymbols" />
 
-				<button type="submit" class="generate-password">
+				<button type="submit" id="generate-password">
 					Generate Password
 				</button>
 			</form>
 		</div>
+		<script src="script.js"></script>
 	</body>
 </html>

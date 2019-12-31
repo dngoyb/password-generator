@@ -61,7 +61,7 @@ label {
 	word-break: break-all;
 }
 
-.generate-password {
+#generate-password {
 	grid-column: span 2;
 	background-color: transparent;
 	border: 2px solid white;
@@ -72,6 +72,7 @@ label {
 	border-radius: 1rem;
 }
 
-.generate-password:hover {
+#generate-password:hover {
 	background-color: #00ff40;
+	color: black;
 }
