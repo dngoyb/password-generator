@@ -8,6 +8,8 @@ const numberCase = document.querySelector('#includeNumbers');
 const generatePass = document.querySelector('#generate-password');
 
 const LOWER_CASE = fromLowToHigh(97, 122);
+const EMPTY_CASE = fromLowToHigh(0, 0);
+
 const UPPER_CASE = fromLowToHigh(65, 90);
 const NUMBER_CASE = fromLowToHigh(48, 57);
 const SYMBOL_CASE = fromLowToHigh(33, 47)
@@ -38,15 +40,18 @@ generatePass.addEventListener('click', e => {
 		hassymbol,
 		len
 	);
+	if (display.innerText === 'undefined') {
+		display.innerText = 'Select at least one option';
+	}
 });
 
 function generatePassword(lower, upper, number, symbol, characterLength) {
-	let charCodes = LOWER_CASE;
+	let charCodes = EMPTY_CASE;
 	const typesCount = lower + upper + number + symbol;
 
-	if (typesCount < 1) return 'select one';
+	if (typesCount < 1) return alert('Select at least one option');
 
-	// if (lower) charCodes = charCodes.concat(LOWER_CASE);
+	if (lower) charCodes = charCodes.concat(LOWER_CASE);
 
 	if (upper) charCodes = charCodes.concat(UPPER_CASE);
 
@@ -61,8 +66,6 @@ function generatePassword(lower, upper, number, symbol, characterLength) {
 		console.log(character);
 		passCharacter.push(String.fromCharCode(character));
 	}
-	console.log(passCharacter);
-
 	return passCharacter.join('');
 }
 
