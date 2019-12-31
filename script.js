@@ -41,7 +41,7 @@ generatePass.addEventListener('click', e => {
 		len
 	);
 	if (display.innerText === 'undefined') {
-		display.innerText = 'Select at least one option';
+		display.innerText = 'Password';
 	}
 });
 
@@ -50,6 +50,8 @@ function generatePassword(lower, upper, number, symbol, characterLength) {
 	const typesCount = lower + upper + number + symbol;
 
 	if (typesCount < 1) return alert('Select at least one option');
+	if (characterLength < 4)
+		return alert('Your password must have at least 5 characters');
 
 	if (lower) charCodes = charCodes.concat(LOWER_CASE);
 
